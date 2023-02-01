@@ -71,7 +71,6 @@ class AuthServices with ChangeNotifier {
       headers: {'Content-Type': 'application/json'},
     );
     autenticando = false;
-    print(resp.body);
     if (resp.statusCode == 200) {
       final loginResponse = loginResponseFromMap(resp.body);
       this.usuario = loginResponse.usuario;
